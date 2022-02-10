@@ -27,7 +27,6 @@ body {
 .wrapper {
   max-width: 375px;
   padding: 0 24px;
-  border: 1px solid red;
 }
 
 .toolbar {
@@ -188,4 +187,47 @@ body {
   border: 1px solid #6070ff;
   border-radius: 8px;
   background-color: transparent;
+}
+
+//About Self
+.about-self {
+  display: flex;
+  flex-direction: column;
+  padding: 114px 24px;
+  background-color: #fff;
+  border-top-right-radius: 80px;
+}
+
+.about-intro {
+  margin-right: 80px;
+}
+
+.socials-about {
+  margin: 32px 0 16px 12px;
+  width: 200px;
+}
+
+.btn-resume {
+  width: 162px;
+}
+
+.skill-list {
+  margin-top: 48px;
+}
+
+.skill {
+  font-size: 1.25rem;
+  font-weight: 500;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 12px;
+  padding: 24px 0;
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.separatorrr {
+  height: 1px;
+  border: 0;
+  background-color: #dfe1e6;
 }
