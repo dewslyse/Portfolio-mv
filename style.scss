@@ -17,22 +17,16 @@ body {
 
 .wrapper {
   max-width: 375px;
-}
-
-.header {
-  padding: 0 24px;
   background-color: #fff;
-  background-image: url(./images/header-bg.png);
-  background-repeat: no-repeat;
-  background-position-y: 64px;
-  background-size: contain;
-  border-end-start-radius: 80px;
+  padding: 0 24px;
 }
 
 .toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  background-color: #fff;
   height: 48px;
 }
 
@@ -45,8 +39,19 @@ body {
   text-decoration: none;
 }
 
+.hamburger {
+  display: flex;
+}
+
 .headline {
-  padding: 114px 0 124px;
+  display: flex;
+  flex-direction: column;
+  padding: 114px 24px 124px;
+  background-image: url(./images/header-bg.png);
+  background-repeat: no-repeat;
+  background-position-y: 16px;
+  background-size: contain;
+  border-end-start-radius: 80px;
 }
 
 .intro {
@@ -76,4 +81,5 @@ body {
 .social-icon {
   text-decoration: none;
   flex-grow: 1;
+  list-style: none;
 }
