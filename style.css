@@ -1,1 +1,99 @@
-/* No CSS */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #E5E5E5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper {
+  max-width: 375px;
+}
+
+.header {
+  padding: 0 24px;
+  background-color: #fff;
+  background-image: url(./images/header-bg.png);
+  background-repeat: no-repeat;
+  background-position-y: 64px;
+  background-size: contain;
+  border-end-start-radius: 80px;
+}
+
+.toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 48px;
+}
+
+.logo {
+  background-color: #6070FF;
+  padding: 0 10px;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.headline {
+  padding: 114px 0 124px;
+}
+
+.intro {
+  color: #172B4D;
+  font-size: 2.5rem;
+  line-height: 1.3;
+}
+
+.description {
+  color: #344563;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+
+.social-media {
+  text-transform: uppercase;
+  color: #7F8CFF;
+  font-weight: 500;
+}
+
+.socials {
+  margin: 12px 0;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social-icon {
+  text-decoration: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
