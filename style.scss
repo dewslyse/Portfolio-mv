@@ -187,6 +187,21 @@ body {
   border: 1px solid #6070ff;
   border-radius: 8px;
   background-color: transparent;
+
+  &:hover {
+    color: #fff;
+    background-color: #6070ff;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: #2230d2;
+  }
+
+  &:disabled {
+    color: #5e6c84;
+    border: 1px solid #c1c7d0;
+  }
 }
 
 //About Self
@@ -224,10 +239,5 @@ body {
   margin: 0 12px;
   padding: 24px 0;
   border-bottom: 1px solid #dfe1e6;
-}
-
-.separatorrr {
-  height: 1px;
-  border: 0;
-  background-color: #dfe1e6;
+  cursor: pointer;
 }
