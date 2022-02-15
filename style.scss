@@ -284,8 +284,18 @@ details[open] summary {
 
 .contact {
   background-image: url(./images/contact-bg.png);
+  display: flex;
+  flex-direction: column;
 }
 
 .input {
   list-style: none;
+}
+
+.contact-form {
+  display: flex;
+}
+
+input {
+  max-width: 100%;
 }
