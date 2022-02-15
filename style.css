@@ -344,7 +344,7 @@ details[open] summary::after {
 .contact {
   background-image: url(./images/contact-bg.png);
   background-size: contain;
-  background-position: right 0;
+  background-position: top 20px right 0;
   background-repeat: no-repeat;
   background-color: #6070ff;
   display: -webkit-box;
@@ -355,18 +355,34 @@ details[open] summary::after {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 103px;
+  padding-bottom: 45px;
   border-top-left-radius: 80px;
 }
 
-.input {
-  list-style: none;
+.contact-description {
+  color: #fff;
+  text-align: center;
+}
+
+.contact-text {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-top: 12px;
 }
 
 .contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 50px;
+}
+
+.input {
+  list-style: none;
 }
 
 input,
@@ -388,21 +404,27 @@ textarea {
   font-family: 'Poppins', sans-serif;
   padding-left: 16px;
   text-align: left;
+  height: 170px;
 }
 
-.contact-description {
-  color: #fff;
-  text-align: center;
-  padding: 0;
+textarea::-webkit-input-placeholder {
+  font-size: 0.9375rem;
 }
 
-.contact-text {
-  font-size: 1.25rem;
-  margin-top: 12px;
+textarea:-ms-input-placeholder {
+  font-size: 0.9375rem;
+}
+
+textarea::-ms-input-placeholder {
+  font-size: 0.9375rem;
+}
+
+textarea::placeholder {
+  font-size: 0.9375rem;
 }
 
 .contact-btn {
   background-color: #fff;
   margin-top: 22px;
+  width: 140px;
 }
-/*# sourceMappingURL=style.css.map */
