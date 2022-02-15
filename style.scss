@@ -284,8 +284,10 @@ details[open] summary {
 
 .contact {
   background-image: url(./images/contact-bg.png);
+  background-color: #6070ff;
   display: flex;
   flex-direction: column;
+  padding-top: 103px;
 }
 
 .input {
@@ -298,4 +300,8 @@ details[open] summary {
 
 input {
   max-width: 100%;
+}
+
+.contact-description {
+  text-align: center;
 }

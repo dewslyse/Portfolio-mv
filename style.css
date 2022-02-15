@@ -339,6 +339,7 @@ details[open] summary::after {
 
 .contact {
   background-image: url(./images/contact-bg.png);
+  background-color: #6070ff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,6 +347,7 @@ details[open] summary::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 103px;
 }
 
 .input {
@@ -360,5 +362,9 @@ details[open] summary::after {
 
 input {
   max-width: 100%;
+}
+
+.contact-description {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
