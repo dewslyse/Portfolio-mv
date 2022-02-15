@@ -2,7 +2,7 @@
 
 # Portfolio
 
-> This an initial setup for the building of my website portfolio during the first module of the Microverse curriculum.
+> This is the complete mobile version of my portfolio website for the Microverse curriculum.
 
 ## Screenshot
 
@@ -20,13 +20,17 @@
 
 
 
-## Author
+## Authors
 
 👤 **@dewslyse**
 
 - GitHub: [@dewslyse](https://github.com/dewslyse)
 <!-- - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle) -->
+
+👤 **@emyrue**
+
+- GitHub: [@emyrue](https://github.com/emyrue)
 
 
 ## 🤝 Contributing
