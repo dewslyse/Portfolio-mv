@@ -343,6 +343,9 @@ details[open] summary::after {
 
 .contact {
   background-image: url(./images/contact-bg.png);
+  background-size: contain;
+  background-position: right 0;
+  background-repeat: no-repeat;
   background-color: #6070ff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -372,13 +375,13 @@ textarea {
   min-width: 100%;
   border-radius: 8px;
   padding: 15px 38px 15px 16px;
-  margin-bottom: 20px;
 }
 
 input {
   height: 48px;
   font-size: 1.0625rem;
   line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 textarea {
@@ -395,4 +398,11 @@ textarea {
 
 .contact-text {
   font-size: 1.25rem;
+  margin-top: 12px;
 }
+
+.contact-btn {
+  background-color: #fff;
+  margin-top: 22px;
+}
+/*# sourceMappingURL=style.css.map */
