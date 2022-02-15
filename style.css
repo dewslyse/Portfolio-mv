@@ -336,3 +336,12 @@ details[open] summary::after {
 .language span {
   padding: 9px 16px 0 12px;
 }
+
+.contact {
+  background-image: url(./images/contact-bg.png);
+}
+
+.input {
+  list-style: none;
+}
+/*# sourceMappingURL=style.css.map */
