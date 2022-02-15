@@ -428,4 +428,5 @@ textarea::placeholder {
   background-color: #fff;
   margin-top: 22px;
   width: 140px;
+  border-color: #fff;
 }
