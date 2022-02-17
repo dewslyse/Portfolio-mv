@@ -13,170 +13,204 @@
 </head>
 
 <body>
-    <header class="toolbar wrapper">
-        <a class="logo" href="#" aria-label="Homepage">>DS_</a>
-        <nav class="hamburger">
-            <img src="./images/menu-btn.svg" alt="">
-        </nav>
+    <header class="toolbar">
+        <div class="toolbar-content">
+            <a class="logo" href="#" aria-label="Homepage">>DS_</a>
+            <nav class="hamburger">
+                <img src="./images/menu-btn.svg" alt="">
+            </nav>
+            <nav class="desktop">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a class="menu-item-link color-caption" href="#">Portfolio</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-item-link color-caption" href="#">About</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-item-link color-caption" href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="headline wrapper">
-            <h1 class="intro color-caption">I’m Selase 👋 Glad to see you!</h1>
-            <p class="description">
-                I’m a software developer! I can help you build a product , feature or website. Look through some of
-                my work and experience! If you like what you see and have a project you need coded, don’t hestiate
-                to contact me.
-            </p>
-            <h2 class="social-media">Let's connect</h2>
-            <ul class="socials">
-                <li class="social-icon">
-                    <a href="#" aria-label="twitter">
-                        <img src="./images/twitter.svg" alt="">
-                    </a>
-                </li>
-                <li class="social-icon">
-                    <a href="#" aria-label="Linkedin">
-                        <img src="./images/Linkedin.svg" alt="">
-                    </a>
-                </li>
-                <li class="social-icon">
-                    <a href="#" aria-label="medium">
-                        <img src="./images/medium.svg" alt="">
-                    </a>
-                </li>
-                <li class="social-icon">
-                    <a href="#" aria-label="Github">
-                        <img src="./images/github.svg" alt="">
-                    </a>
-                </li>
-                <li class="social-icon">
-                    <a href="#" aria-label="AngelList">
-                        <img src="./images/AngelList.svg" alt="">
-                    </a>
-                </li>
-            </ul>
+    <main class="main">
+        <section class="headline">
+            <div class="headline-content">
+                <h1 class="intro color-caption">I’m Selase 👋 Glad to see you!</h1>
+                <p class="description">
+                    I’m a software developer! I can help you build a product , feature or website. Look through some of
+                    my work and experience! If you like what you see and have a project you need coded, don’t hestiate
+                    to contact me.
+                </p>
+                <h2 class="social-media">Let's connect</h2>
+                <ul class="socials">
+                    <li class="social-icon">
+                        <a href="#" aria-label="twitter">
+                            <img src="./images/twitter.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#" aria-label="Linkedin">
+                            <img src="./images/Linkedin.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#" aria-label="medium">
+                            <img src="./images/medium.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#" aria-label="Github">
+                            <img src="./images/github.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#" aria-label="AngelList">
+                            <img src="./images/AngelList.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section class="works wrapper">
             <h2 class="sr-only">Works Section</h2>
             <article class="card">
-                <img src="./images/Tonic.png" alt="" aria-hidden="true">
-                <h3 class="title color-caption">Tonic</h3>
-                <div class="profile">
-                    <div class="client">Canopy</div>
-                    <div class="role color-gray">Back End Dev</div>
-                    <div class="year color-gray">2015</div>
+                <img class="card-img" src="./images/Tonic.png" alt="" aria-hidden="true">
+                <div class="card-description">
+                    <h3 class="title color-caption">Tonic</h3>
+                    <div class="profile">
+                        <div class="client">Canopy</div>
+                        <div class="role color-gray">Back End Dev</div>
+                        <div class="year color-gray">2015</div>
+                    </div>
+                    <p class="details">
+                        A daily selection of privately personalized reads; no accounts or sign-ups required.
+                    </p>
+                    <ul class="tags">
+                        <li class="tag">html</li>
+                        <li class="tag">css</li>
+                        <li class="tag">javascript</li>
+                    </ul>
+                    <button class="btn">See Project</button>
                 </div>
-                <p class="details">
-                    A daily selection of privately personalized reads; no accounts or sign-ups required.
-                </p>
-                <ul class="tags">
-                    <li class="tag">html</li>
-                    <li class="tag">css</li>
-                    <li class="tag">javascript</li>
-                </ul>
-                <button class="btn">See Project</button>
             </article>
 
             <article class="card">
-                <img src="./images/stories.png" alt="" aria-hidden="true">
-                <h3 class="title color-caption">Multi-Post
-                    Stories</h3>
-                <div class="profile">
-                    <div class="client">Canopy</div>
-                    <div class="role color-gray">Back End Dev</div>
-                    <div class="year color-gray">2015</div>
+                <img class="card-img" src="./images/stories.png" alt="" aria-hidden="true">
+                <div class="card-description">
+                    <h3 class="title color-caption">Multi-Post
+                        Stories</h3>
+                    <div class="profile">
+                        <div class="client">Facebook</div>
+                        <div class="role color-gray">Full Stack Dev</div>
+                        <div class="year color-gray">2015</div>
+                    </div>
+                    <p class="details">
+                        Experimental content creation feature that allows users to add to an existing story over the
+                        course
+                        of a day without spamming their friends.
+                    </p>
+                    <ul class="tags">
+                        <li class="tag">html</li>
+                        <li class="tag ruby">Ruby on rails</li>
+                        <li class="tag">css</li>
+                        <li class="tag">javascript</li>
+                    </ul>
+                    <button class="btn">See Project</button>
                 </div>
-                <p class="details">
-                    A daily selection of privately personalized reads; no accounts or sign-ups required.
-                </p>
-                <ul class="tags">
-                    <li class="tag">html</li>
-                    <li class="tag">css</li>
-                    <li class="tag">javascript</li>
-                </ul>
-                <button class="btn">See Project</button>
             </article>
 
             <article class="card">
-                <img src="./images/tonic-2.png" alt="" aria-hidden="true">
-                <h3 class="title color-caption">Tonic</h3>
-                <div class="profile">
-                    <div class="client">Canopy</div>
-                    <div class="role color-gray">Back End Dev</div>
-                    <div class="year color-gray">2015</div>
+                <img class="card-img" src="./images/facebook-360.png" alt="" aria-hidden="true">
+                <div class="card-description">
+                    <h3 class="title color-caption">Facebook 360</h3>
+                    <div class="profile">
+                        <div class="client">Facebook</div>
+                        <div class="role color-gray">Full Stack Dev</div>
+                        <div class="year color-gray">2015</div>
+                    </div>
+                    <p class="details">
+                        Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and
+                        enjoy
+                        360 photos and videos on Gear VR.
+                    </p>
+                    <ul class="tags">
+                        <li class="tag">html</li>
+                        <li class="tag ruby">Ruby on rails</li>
+                        <li class="tag">css</li>
+                        <li class="tag">javascript</li>
+                    </ul>
+                    <button class="btn">See Project</button>
                 </div>
-                <p class="details">
-                    A daily selection of privately personalized reads; no accounts or sign-ups required.
-                </p>
-                <ul class="tags">
-                    <li class="tag">html</li>
-                    <li class="tag">css</li>
-                    <li class="tag">javascript</li>
-                </ul>
-                <button class="btn">See Project</button>
             </article>
 
             <article class="card">
-                <img src="./images/stories-2.png" alt="" aria-hidden="true">
-                <h3 class="title color-caption">Multi-Post
-                    Stories</h3>
-                <div class="profile">
-                    <div class="client">Canopy</div>
-                    <div class="role color-gray">Back End Dev</div>
-                    <div class="year color-gray">2015</div>
+                <img class="card-img" src="./images/uber.png" alt="" aria-hidden="true">
+                <div class="card-description">
+                    <h3 class="title color-caption">Uber Navigation</h3>
+                    <div class="profile">
+                        <div class="client">Uber</div>
+                        <div class="role color-gray">Lead Developer</div>
+                        <div class="year color-gray">2018</div>
+                    </div>
+                    <p class="details">
+                        A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive
+                        computer: your car.
+                    </p>
+                    <ul class="tags">
+                        <li class="tag">html</li>
+                        <li class="tag ruby">Ruby on rails</li>
+                        <li class="tag">css</li>
+                        <li class="tag">javascript</li>
+                    </ul>
+                    <button class="btn">See Project</button>
                 </div>
-                <p class="details">
-                    A daily selection of privately personalized reads; no accounts or sign-ups required.
-                </p>
-                <ul class="tags">
-                    <li class="tag">html</li>
-                    <li class="tag">css</li>
-                    <li class="tag">javascript</li>
-                </ul>
-                <button class="btn">See Project</button>
             </article>
         </section>
 
-        <section class="about-self wrapper">
+        <section class="about-self">
             <h2 class="sr-only">About Section</h2>
-            <h3 class="intro about-intro color-caption">About
-                Myself</h3>
-            <p class="description">
-                I’m a software developer! I can help you build a product , feature or website. Look through some of
-                my work and experience! If you like what you see and have a project you need coded, don’t hestiate
-                to contact me.
-            </p>
-            <h2 class="social-media">Let's connect</h2>
-            <ul class="socials socials-about">
-                <li class="social-icon">
-                    <a href="#" aria-label="Github">
-                        <img src="./images/github.svg" alt="">
-                    </a>
-                </li>
-                <li class="social-icon">
-                    <a href="#" aria-label="Linkedin">
-                        <img src="./images/Linkedin.svg" alt="">
-                    </a>
-                </li>
-                <li class="social-icon">
-                    <a href="#" aria-label="AngelList">
-                        <img src="./images/AngelList.svg" alt="">
-                    </a>
-                </li>
-                <li class="social-icon">
-                    <a href="#" aria-label="twitter">
-                        <img src="./images/twitter.svg" alt="">
-                    </a>
-                </li>
-                <li class="social-icon">
-                    <a href="#" aria-label="medium">
-                        <img src="./images/medium.svg" alt="">
-                    </a>
-                </li>
-            </ul>
-            <button class="btn btn-resume">Get my resume</button>
+            <section class="about-content">
+                <h3 class="intro about-intro color-caption">About
+                    Myself</h3>
+                <p class="description about-description">
+                    I’m a software developer! I can help you build a product , feature or website. Look through some of
+                    my work and experience! If you like what you see and have a project you need coded, don’t hestiate
+                    to contact me.
+                </p>
+                <h2 class="social-media">Let's connect</h2>
+                <ul class="socials socials-about">
+                    <li class="social-icon">
+                        <a href="#" aria-label="Github">
+                            <img src="./images/github.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#" aria-label="Linkedin">
+                            <img src="./images/Linkedin.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#" aria-label="AngelList">
+                            <img src="./images/AngelList.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#" aria-label="twitter">
+                            <img src="./images/twitter.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="#" aria-label="medium">
+                            <img src="./images/medium.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn btn-resume">Get my resume</button>
+            </section>
             <ul class="skill-list">
                 <li class="skill">
                     <details open>
@@ -212,39 +246,39 @@
                 </li>
             </ul>
         </section>
-
-        <footer class="contact-section">
-            <h2 class="sr-only">contact Section</h2>
-            <section class="contact wrapper">
-                <div class="contact-description">
-                    <h2 class="intro">Contact me</h2>
-                    <p class="contact-text">
-                        If you have an application you are interested in developing, a feature that you need built or a
-                        project
-                        that needs coding. I’d love to help with it
-                    </p>
-                </div>
-
-                <form class="contact-form" action="https://formspree.io/f/mqknqplg" method="post">
-                    <ul>
-                        <li class="input">
-                            <input type="text" name="name" id="name" aria-label="Name input" maxlength="30"
-                                placeholder="First Last" required>
-                        </li>
-                        <li class="input">
-                            <input type="email" name="email" id="email" placeholder="Place email here"
-                                aria-label="Email input" required>
-                        </li>
-                    </ul>
-                    <textarea name="message" id="message" maxlength="500" aria-label="Text input"
-                        placeholder="Write your message here" required></textarea>
-                    <button class="btn contact-btn" type="submit">
-                        Get In Touch
-                    </button>
-                </form>
-            </section>
-        </footer>
     </main>
+
+    <footer class="contact-section">
+        <h2 class="sr-only">contact Section</h2>
+        <section class="contact">
+            <div class="contact-description">
+                <h2 class="intro contact-intro">Contact me</h2>
+                <p class="contact-text">
+                    If you have an application you are interested in developing, a feature that you need built or a
+                    project
+                    that needs coding. I’d love to help with it
+                </p>
+            </div>
+
+            <form class="contact-form" action="https://formspree.io/f/mqknqplg" method="post">
+                <ul>
+                    <li class="input">
+                        <input type="text" name="name" id="name" aria-label="Name input" maxlength="30"
+                            placeholder="First Last" required>
+                    </li>
+                    <li class="input">
+                        <input type="email" name="email" id="email" placeholder="Place email here"
+                            aria-label="Email input" required>
+                    </li>
+                </ul>
+                <textarea name="message" id="message" maxlength="500" aria-label="Text input"
+                    placeholder="Write your message here" required></textarea>
+                <button class="btn contact-btn" type="submit">
+                    Get In Touch
+                </button>
+            </form>
+        </section>
+    </footer>
 </body>
 
 </html>

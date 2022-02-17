@@ -2,7 +2,7 @@
 
 # Portfolio
 
-> This is the complete mobile version of my portfolio website for the Microverse curriculum.
+> This is the complete version of my portfolio website for the Microverse curriculum. The website is optimized for desktop and mobile.
 
 ## Screenshot
 
