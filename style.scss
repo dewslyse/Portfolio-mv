@@ -486,6 +486,11 @@ textarea {
     &:nth-of-type(even) {
       flex-direction: row-reverse;
     }
+
+    &:hover {
+      border: 2px solid #a7aeff;
+      filter: drop-shadow(0px 48px 48px rgba(37, 47, 137, 0.08));
+    }
   }
 
   .card-img {
