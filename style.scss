@@ -55,6 +55,10 @@ body {
   margin-left: 24px;
 }
 
+.desktop {
+  display: none;
+}
+
 .hamburger {
   margin-right: 10px;
 }
@@ -71,7 +75,7 @@ body {
   background-image: url(./images/header-bg.png);
   background-repeat: no-repeat;
   background-position-y: 16px;
-  background-size: contain;
+  background-size: cover;
   border-end-start-radius: 80px;
   background-color: #fff;
 }
@@ -381,4 +385,82 @@ textarea {
   margin-top: 22px;
   width: 140px;
   border-color: #fff;
+}
+
+//MEDIA QUERIES
+@media screen and (min-width: 1110px) {
+  // .wrapper {
+  //   // max-width: 1440px;
+  // }
+
+  .toolbar {
+    height: 72px;
+  }
+
+  .toolbar-content {
+    padding: 25px 155px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .menu-item {
+    list-style: none;
+    margin-left: 32px;
+  }
+
+  .menu-item-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+  }
+
+  .headline {
+    background-image: url(./images/header-bg-desktop.png);
+    background-size: contain;
+    height: calc(100vh - 72px);
+    // height: 100vh;
+    background-position: top 46px center;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .headline-content {
+    // border: 1px solid red;
+    max-width: 920px;
+  }
+
+  .intro {
+    font-size: 3rem;
+    padding-right: 500px;
+  }
+
+  .description {
+    font-size: 1.25rem;
+  }
+
+  .social-media {
+    margin-top: 24px;
+    margin-bottom: 14px;
+  }
+
+  .socials {
+    display: inline-flex;
+    width: unset;
+  }
+
+  .social-icon {
+    margin-right: 20px;
+  }
+
 }
