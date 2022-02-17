@@ -35,11 +35,25 @@ body {
 }
 
 .wrapper {
-  max-width: 375px;
+  max-width: 600px;
   padding: 0 24px;
+  margin: 0 auto;
 }
 
 .toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background-color: #fff;
+  height: 48px;
+}
+
+.toolbar-content {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,9 +63,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
-  background-color: #fff;
-  height: 48px;
 }
 
 .logo {
@@ -61,12 +72,16 @@ body {
   color: #fff;
   font-weight: 600;
   text-decoration: none;
+  margin-left: 24px;
 }
 
 .hamburger {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-right: 10px;
+}
+
+.main {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .headline {
@@ -84,6 +99,11 @@ body {
   background-size: contain;
   border-end-start-radius: 80px;
   background-color: #fff;
+}
+
+.headline-content {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .intro {
@@ -261,8 +281,9 @@ body {
   border-top-right-radius: 80px;
 }
 
-.about-intro {
-  margin-right: 80px;
+.about-content {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .socials-about {
@@ -339,6 +360,14 @@ details[open] summary::after {
 
 .contact-section {
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
 }
 
 .contact {
@@ -357,11 +386,16 @@ details[open] summary::after {
   padding-top: 103px;
   padding-bottom: 45px;
   border-top-left-radius: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact-description {
   color: #fff;
   text-align: center;
+  max-width: 375px;
+  padding: 0 24px;
 }
 
 .contact-text {
@@ -379,6 +413,9 @@ details[open] summary::after {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 50px;
+  width: 100%;
+  max-width: 375px;
+  padding: 0 24px;
 }
 
 .input {
@@ -388,10 +425,10 @@ details[open] summary::after {
 input,
 textarea {
   border: 1px solid #6070ff;
-  min-width: 100%;
   border-radius: 8px;
   padding: 15px 38px 15px 16px;
   outline-color: #6070ff;
+  width: 100%;
 }
 
 input {
