@@ -256,6 +256,10 @@ body {
   margin-right: 8px;
 }
 
+.ruby {
+  display: none;
+}
+
 .btn {
   margin: 12px 0;
   font-size: 1.0625rem;
@@ -299,7 +303,6 @@ body {
 
 .about-content {
   max-width: 600px;
-  margin: 0 auto;
 }
 
 .socials-about {
@@ -484,7 +487,7 @@ textarea::placeholder {
   border-color: #fff;
 }
 
-@media screen and (min-width: 1110px) {
+@media screen and (min-width: 1100px) {
   .wrapper {
     max-width: 1440px;
   }
@@ -545,15 +548,6 @@ textarea::placeholder {
     margin-top: 24px;
     margin-bottom: 14px;
   }
-  .socials {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    width: unset;
-  }
-  .social-icon {
-    margin-right: 20px;
-  }
   .works {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -598,6 +592,9 @@ textarea::placeholder {
   .tags {
     margin: 24px 0;
   }
+  .ruby {
+    display: block;
+  }
   .about-self {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -608,8 +605,7 @@ textarea::placeholder {
   }
   .about-content {
     margin: 0;
-    max-width: 447px;
-    border: 1px solid red;
+    max-width: 445px;
   }
   .about-description {
     font-size: 1rem;
@@ -630,7 +626,6 @@ textarea::placeholder {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    border: solid 1px green;
     margin-top: 0;
   }
   .language-list {
@@ -638,6 +633,12 @@ textarea::placeholder {
     display: -ms-flexbox;
     display: flex;
     gap: 12px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .language-list span {
+    padding: 16px 0 0 0;
   }
   .language {
     -webkit-box-orient: vertical;
@@ -650,6 +651,10 @@ textarea::placeholder {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    padding: 0 12px;
+    width: 122px;
+    height: 120px;
+    font-size: 0.9375rem;
   }
   .contact {
     background-image: url(./images/contact-bg-desktop.png);

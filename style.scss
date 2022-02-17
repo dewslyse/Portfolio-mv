@@ -209,6 +209,10 @@ body {
   margin-right: 8px;
 }
 
+.ruby {
+  display: none;
+}
+
 .btn {
   margin: 12px 0;
   font-size: 1.0625rem;
@@ -248,13 +252,11 @@ body {
 
 .about-content {
   max-width: 600px;
-  margin: 0 auto;
 }
 
 .socials-about {
   margin: 32px 0 16px 12px;
   width: 200px;
-  // display: block;
 }
 
 .btn-resume {
@@ -398,7 +400,7 @@ textarea {
 }
 
 //MEDIA QUERIES
-@media screen and (min-width: 1110px) {
+@media screen and (min-width: 1100px) {
   .wrapper {
     max-width: 1440px;
   }
@@ -466,15 +468,6 @@ textarea {
     margin-bottom: 14px;
   }
 
-  .socials {
-    display: inline-flex;
-    width: unset;
-  }
-
-  .social-icon {
-    margin-right: 20px;
-  }
-
   //Works section
   .works {
     justify-content: center;
@@ -518,22 +511,20 @@ textarea {
     margin: 24px 0;
   }
 
-  //About section 
+  .ruby {
+    display: block;
+  }
+
+  //About section
   .about-self {
-    // max-width: 1156px;
     flex-direction: row;
     padding: 114px 152px;
-    // justify-content: flex-start;
-    gap: 25px
-    ;
+    gap: 25px;
   }
 
   .about-content {
     margin: 0;
-    max-width: 447px;
-    // padding-right: 10px;
-    // flex-direction: column;
-    border: 1px solid red;
+    max-width: 445px;
   }
 
   .about-description {
@@ -542,9 +533,6 @@ textarea {
 
   .socials {
     display: flex;
-    // width: unset;
-    // justify-content: flex-start;
-    // flex-grow: 0;
   }
 
   .social-icon {
@@ -555,21 +543,28 @@ textarea {
 
   .skill-list {
     flex-grow: 1;
-    border: solid 1px green;
     margin-top: 0;
   }
 
   .language-list {
     display: flex;
     gap: 12px;
+    justify-content: flex-start;
+
+    span {
+      padding: 16px 0 0 0;
+    }
   }
 
   .language {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    padding: 0 12px;
+    width: 122px;
+    height: 120px;
+    font-size: 0.9375rem;
   }
-
 
   //Contact section
   .contact {
