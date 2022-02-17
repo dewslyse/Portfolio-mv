@@ -576,14 +576,12 @@ textarea::placeholder {
     width: calc(50% - 22px);
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    border: 1px solid green;
   }
   .card-description {
     width: 50%;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     padding: 24px 12px 0 12px;
-    border: 1px solid blue;
   }
   .title {
     margin-top: 0;
