@@ -492,6 +492,7 @@ textarea::placeholder {
     height: 72px;
     position: fixed;
     top: 0;
+    z-index: 1000;
   }
   .toolbar-content {
     padding: 25px 80px;
@@ -574,8 +575,8 @@ textarea::placeholder {
   }
   .card:hover {
     border: 2px solid #a7aeff;
-    -webkit-filter: drop-shadow(0px 48px 48px rgba(37, 47, 137, 0.08));
-            filter: drop-shadow(0px 48px 48px rgba(37, 47, 137, 0.08));
+    -webkit-filter: drop-shadow(0 48px 48px rgba(37, 47, 137, 0.08));
+            filter: drop-shadow(0 48px 48px rgba(37, 47, 137, 0.08));
   }
   .card-img {
     width: calc(50% - 22px);
@@ -596,6 +597,59 @@ textarea::placeholder {
   }
   .tags {
     margin: 24px 0;
+  }
+  .about-self {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 114px 152px;
+    gap: 25px;
+  }
+  .about-content {
+    margin: 0;
+    max-width: 447px;
+    border: 1px solid red;
+  }
+  .about-description {
+    font-size: 1rem;
+  }
+  .socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .social-icon {
+    margin-right: 23px;
+    padding: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .skill-list {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    border: solid 1px green;
+    margin-top: 0;
+  }
+  .language-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 12px;
+  }
+  .language {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .contact {
     background-image: url(./images/contact-bg-desktop.png);

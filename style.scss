@@ -254,6 +254,7 @@ body {
 .socials-about {
   margin: 32px 0 16px 12px;
   width: 200px;
+  // display: block;
 }
 
 .btn-resume {
@@ -406,6 +407,7 @@ textarea {
     height: 72px;
     position: fixed;
     top: 0;
+    z-index: 1000;
   }
 
   .toolbar-content {
@@ -489,7 +491,7 @@ textarea {
 
     &:hover {
       border: 2px solid #a7aeff;
-      filter: drop-shadow(0px 48px 48px rgba(37, 47, 137, 0.08));
+      filter: drop-shadow(0 48px 48px rgba(37, 47, 137, 0.08));
     }
   }
 
@@ -515,6 +517,59 @@ textarea {
   .tags {
     margin: 24px 0;
   }
+
+  //About section 
+  .about-self {
+    // max-width: 1156px;
+    flex-direction: row;
+    padding: 114px 152px;
+    // justify-content: flex-start;
+    gap: 25px
+    ;
+  }
+
+  .about-content {
+    margin: 0;
+    max-width: 447px;
+    // padding-right: 10px;
+    // flex-direction: column;
+    border: 1px solid red;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .socials {
+    display: flex;
+    // width: unset;
+    // justify-content: flex-start;
+    // flex-grow: 0;
+  }
+
+  .social-icon {
+    margin-right: 23px;
+    padding: 0;
+    flex-grow: 0;
+  }
+
+  .skill-list {
+    flex-grow: 1;
+    border: solid 1px green;
+    margin-top: 0;
+  }
+
+  .language-list {
+    display: flex;
+    gap: 12px;
+  }
+
+  .language {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
 
   //Contact section
   .contact {
