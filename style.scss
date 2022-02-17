@@ -184,9 +184,9 @@ body {
 }
 
 .tags {
-  display: flex;
-  justify-content: space-between;
-  width: 203px;
+  display: inline-flex;
+  // justify-content: space-between;
+  // width: 203px;
   margin: 16px 0;
   font-size: 0.75rem;
   font-weight: 500;
@@ -199,6 +199,7 @@ body {
   letter-spacing: 0.03em;
   border-radius: 8px;
   list-style: none;
+  margin-right: 8px;
 }
 
 .btn {
