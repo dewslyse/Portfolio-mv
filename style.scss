@@ -36,7 +36,6 @@ body {
   width: 100%;
   background-color: #fff;
   height: 48px;
-  // position: fixed;
 }
 
 .toolbar-content {
@@ -143,6 +142,16 @@ body {
   border-radius: 16px;
 }
 
+.card-img {
+  width: 100%;
+  height: auto;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+}
+
 .title {
   font-size: 2.05rem;
   line-height: 1.375;
@@ -185,8 +194,6 @@ body {
 
 .tags {
   display: inline-flex;
-  // justify-content: space-between;
-  // width: 203px;
   margin: 16px 0;
   font-size: 0.75rem;
   font-weight: 500;
@@ -391,9 +398,9 @@ textarea {
 
 //MEDIA QUERIES
 @media screen and (min-width: 1110px) {
-  // .wrapper {
-  //   // max-width: 1440px;
-  // }
+  .wrapper {
+    max-width: 1440px;
+  }
 
   .toolbar {
     height: 72px;
@@ -403,8 +410,6 @@ textarea {
 
   .toolbar-content {
     padding: 25px 80px;
-    // padding: 25px auto;
-    // margin-left: 155px;
     max-width: 1440px;
   }
 
@@ -435,7 +440,6 @@ textarea {
     background-image: url(./images/header-bg-desktop.png);
     background-size: contain;
     height: calc(100vh - 72px);
-    // height: 100vh;
     background-position: top 46px center;
     align-items: center;
     justify-content: center;
@@ -443,7 +447,6 @@ textarea {
   }
   
   .headline-content {
-    // border: 1px solid red;
     max-width: 920px;
   }
 
@@ -470,4 +473,43 @@ textarea {
     margin-right: 20px;
   }
 
+  //Works section
+.works {
+  justify-content: center;
+}
+
+  .card {
+    flex-direction: row;
+    margin: 0 142px;
+    gap: 22px;
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .card-img {
+    width: calc(50% - 22px);
+    flex-basis: 50%;
+    border: 1px solid green;
+  }
+
+  .card-description {
+    width: 50%;
+    flex-basis: 50%;
+    padding: 24px 12px 0 12px;
+    border: 1px solid blue;
+  }
+
+  .title {
+    margin-top: 0;
+  }
+
+  .details {
+    margin-top: 24px;
+  }
+
+  .tags {
+    margin: 24px 0;
+  }
 }
