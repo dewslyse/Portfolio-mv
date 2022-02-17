@@ -597,4 +597,24 @@ textarea::placeholder {
   .tags {
     margin: 24px 0;
   }
+  .contact {
+    background-image: url(./images/contact-bg-desktop.png);
+    background-position: top 80px center;
+    padding: 142px 0 103px;
+  }
+  .contact-description {
+    max-width: 800px;
+  }
+  .contact-intro {
+    padding: 0;
+  }
+  .contact-text {
+    padding: 0 100px;
+  }
+  .contact-form {
+    max-width: 460px;
+  }
+  .contact-btn {
+    margin: 22px auto;
+  }
 }
