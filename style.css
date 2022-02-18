@@ -677,3 +677,45 @@ textarea::placeholder {
     margin: 22px auto;
   }
 }
+
+.wave {
+  display: inline-block;
+  -webkit-animation-name: wave;
+          animation-name: wave;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5;
+  -webkit-animation-direction: 0.5s;
+          animation-direction: 0.5s;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}

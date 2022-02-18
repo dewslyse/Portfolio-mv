@@ -593,3 +593,36 @@ textarea {
     margin: 22px auto;
   }
 }
+
+//animations 
+.wave {
+  display: inline-block;
+  // background-color: red;
+  &:hover {
+    // transform: rotate(180deg);
+    // background-color: blue;
+    // transform: ;
+    
+  }
+  // transform: rotate(180deg);
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-iteration-count: 5;
+  animation-direction: 0.5s;
+  // display: block;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
