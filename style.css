@@ -719,3 +719,13 @@ textarea::placeholder {
             transform: rotate(-5deg);
   }
 }
+
+.btn {
+  -webkit-transition: background-color, 2s, 1s;
+  transition: background-color, 2s, 1s;
+}
+
+.btn:hover {
+  background-color: #6070ff;
+}
+/*# sourceMappingURL=style.css.map */
