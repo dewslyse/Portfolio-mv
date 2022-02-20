@@ -744,4 +744,12 @@ textarea::placeholder {
   .contact-btn {
     margin: 22px auto;
   }
+  :is(a, button, summary):focus-visible {
+    outline: 3px dotted #396df2;
+    outline-offset: 2px;
+  }
+  .contact-btn:focus-visible {
+    outline: 3px dotted #e5e5e5;
+    outline-offset: 2px;
+  }
 }
