@@ -13,20 +13,24 @@
 
 - HTML
 - CSS/SCSS
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
 
-<!-- ## Live Demo (if available)
+## Live Site
 
-[Live Demo Link](https://livedemo.com) -->
+🔗 [Live Site Link](https://dewslyse.github.io/Portfolio-mv/) 🚀
 
 
-
-## Authors
+## Author
 
 👤 **@dewslyse**
 
 - GitHub: [@dewslyse](https://github.com/dewslyse)
 <!-- - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle) -->
+
+### Collaborator(s)
 
 👤 **@emyrue**
 
@@ -37,7 +41,7 @@
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/microverseinc/readme-template/issues).
+Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
