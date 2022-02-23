@@ -66,7 +66,7 @@ body {
 }
 
 .logo {
-  background-color: #6070ff;
+  background-color: #0821ff;
   padding: 0 10px;
   border-radius: 3px;
   color: #fff;
@@ -297,6 +297,16 @@ body {
   right: -12px;
 }
 
+.card:nth-of-type(2) .role::before,
+.card:nth-of-type(3) .role::before {
+  left: -8px;
+}
+
+.card:nth-of-type(2) .role::after,
+.card:nth-of-type(3) .role::after {
+  right: -8px;
+}
+
 .details {
   margin-top: 16px;
   line-height: 1.5;
@@ -312,7 +322,7 @@ body {
 }
 
 .tag {
-  color: #6070ff;
+  color: #3448fc;
   background-color: #ebebff;
   padding: 4px 12px;
   letter-spacing: 0.03em;
