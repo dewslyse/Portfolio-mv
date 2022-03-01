@@ -1,13 +1,16 @@
 //Toggle mobile menu
-const toggleMenu = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.desktoppp');
-const closeMenu = document.querySelector('.bars');
-const listMenu = document.querySelector('.menu')
+const openMenu = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.desktop');
+const menuItems = document.querySelectorAll('.menu-item');
 
+openMenu.addEventListener('click', () => {
+    openMenu.classList.toggle('hide');
+    mobileMenu.classList.toggle('show');
+})
 
-toggleMenu.addEventListener('click', function () {
-    console.log("Test");
-    mobileMenu.classList.toggle('visible');
-    closeMenu.classList.toggle('visible');
-    listMenu.classList.toggle('visible');
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        mobileMenu.classList.toggle('show');
+        openMenu.classList.toggle('hide');
+    })
 })
