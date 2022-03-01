@@ -14,3 +14,4 @@ menuItems.forEach(item => {
         openMenu.classList.toggle('hide');
     })
 })
+
