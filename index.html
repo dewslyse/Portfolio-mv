@@ -26,19 +26,18 @@
     <header class="toolbar">
         <div class="toolbar-content">
             <a class="logo" href="#" aria-label="Homepage">>DS_</a>
-            <nav class="hamburger">
-                <img src="./images/menu-btn.svg" alt="">
-            </nav>
+            <div class="hamburger">
+            </div>
             <nav class="desktop">
                 <ul class="menu">
                     <li class="menu-item">
-                        <a class="menu-item-link color-caption" href="#">Portfolio</a>
+                        <a class="menu-item-link color-caption" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="menu-item">
-                        <a class="menu-item-link color-caption" href="#">About</a>
+                        <a class="menu-item-link color-caption" href="#about">About</a>
                     </li>
                     <li class="menu-item">
-                        <a class="menu-item-link color-caption" href="#">Contact</a>
+                        <a class="menu-item-link color-caption" href="#contact">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -85,7 +84,7 @@
             </div>
         </section>
 
-        <section class="works wrapper">
+        <section class="works wrapper" id="portfolio">
             <h2 class="sr-only">Works Section</h2>
             <article class="card">
                 <img class="card-img" src="./images/Tonic.png" alt="" aria-hidden="true">
@@ -104,7 +103,7 @@
                         <li class="tag">css</li>
                         <li class="tag">javascript</li>
                     </ul>
-                    <button class="btn">See Project</button>
+                    <button class="btn" type="button">See Project</button>
                 </div>
             </article>
 
@@ -129,7 +128,7 @@
                         <li class="tag">css</li>
                         <li class="tag">javascript</li>
                     </ul>
-                    <button class="btn">See Project</button>
+                    <button class="btn" type="button">See Project</button>
                 </div>
             </article>
 
@@ -153,7 +152,7 @@
                         <li class="tag">css</li>
                         <li class="tag">javascript</li>
                     </ul>
-                    <button class="btn">See Project</button>
+                    <button class="btn" type="button">See Project</button>
                 </div>
             </article>
 
@@ -176,12 +175,12 @@
                         <li class="tag">css</li>
                         <li class="tag">javascript</li>
                     </ul>
-                    <button class="btn">See Project</button>
+                    <button class="btn" type="button">See Project</button>
                 </div>
             </article>
         </section>
 
-        <section class="about-self">
+        <section class="about-self" id="about">
             <h2 class="sr-only">About Section</h2>
             <section class="about-content">
                 <h3 class="intro about-intro color-caption">About
@@ -219,7 +218,7 @@
                         </a>
                     </li>
                 </ul>
-                <button class="btn btn-resume">Get my resume</button>
+                <button class="btn btn-resume" type="button">Get my resume</button>
             </section>
             <ul class="skill-list">
                 <li class="skill">
@@ -258,7 +257,7 @@
         </section>
     </main>
 
-    <footer class="contact-section">
+    <footer class="contact-section" id="contact">
         <h2 class="sr-only">contact Section</h2>
         <section class="contact">
             <div class="contact-description">
@@ -289,6 +288,8 @@
             </form>
         </section>
     </footer>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
