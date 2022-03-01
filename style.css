@@ -260,7 +260,8 @@ body {
   padding: 114px 24px;
 }
 
-.card {
+.card,
+.popup {
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,6 +324,7 @@ body {
 
 .client {
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .role::before {
@@ -404,6 +406,68 @@ body {
 .btn:disabled {
   color: #5e6c84;
   border: 1px solid #c1c7d0;
+}
+
+.popup {
+  border: 1px solid red;
+}
+
+.popup-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 5px;
+}
+
+.popup-profile {
+  margin: 0 0 12px;
+}
+
+.popup-details {
+  font-size: 0.9375rem;
+}
+
+.popup-line {
+  background-color: #ebecf0;
+  height: 1px;
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.popup-btn-gp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+.popup-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.9375rem;
+  line-height: 20px;
+  margin-bottom: 8px;
+  width: unset;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.popup-btn span {
+  margin-left: 12px;
 }
 
 .about-self {
@@ -670,6 +734,17 @@ textarea::placeholder {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .popup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 142px;
+    max-width: 1156px;
   }
   .card {
     -webkit-box-orient: horizontal;
