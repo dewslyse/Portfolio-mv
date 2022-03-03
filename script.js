@@ -115,7 +115,7 @@ worksSection.innerHTML = `
 `;
 
 const projectBtn = document.querySelectorAll('.btn');
-const header = document.querySelector('header');
+const main = document.querySelector('main');
 
 let modal;
 let modalBg;
@@ -132,12 +132,12 @@ function closeModal() {
 const arr = [];
 
 for (let i = 0; i < worksList.length; i += 1) {
-  modal = document.createElement('article');
+  modal = document.createElement('div');
   arr.push(`
     <article class="popup">
       <div class="popup-header">
         <h3 class="title color-caption">${worksList[i].title}</h3>
-        <img src="./images/Icon-cancel-black.png" alt="">    
+        <img class="popup-close" src="./images/Icon-cancel-black.png" alt="">    
       </div>
       <div class="popup-profile">
         <div class="client">${worksList[i].clientName}</div>
@@ -167,7 +167,7 @@ projectBtn.forEach((btn, index) => {
       modalBg = document.createElement('div');
       modalBg.classList.add('popup-bg');
       modalBg.addEventListener('click', closeModal);
-      document.body.insertBefore(modalBg, header);
+      main.appendChild(modalBg);
       modalBg.appendChild(modal);
     }
   });
