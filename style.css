@@ -818,8 +818,8 @@ textarea::placeholder {
     gap: 20px;
   }
   .popup-details {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
   }
   .popup-desc-right {
     -ms-flex-preferred-size: 50%;
