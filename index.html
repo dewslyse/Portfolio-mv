@@ -182,7 +182,7 @@
                 <ul>
                     <li class="input">
                         <input type="text" name="name" id="name" aria-label="Name input" maxlength="30"
-                            placeholder="First Last" required>
+                            placeholder="Full Name" required>
                     </li>
                     <li class="input">
                         <input type="email" name="email" id="email" placeholder="Place email here"
@@ -191,7 +191,8 @@
                 </ul>
                 <textarea name="message" id="message" maxlength="500" aria-label="Text input"
                     placeholder="Write your message here" required></textarea>
-                <button class="btn contact-btn" type="submit">
+                <span class="error-msg" aria-live="polite"></span>
+                <button class="contact-btn form-btn" type="submit" id="submit">
                     Get In Touch
                 </button>
             </form>
