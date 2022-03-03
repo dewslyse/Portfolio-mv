@@ -409,12 +409,13 @@ body {
 }
 
 .btn-resume {
-  width: 162px;
+  width: 162px !important;
 }
 
 .btn,
 .popup-btn,
-.btn-resume {
+.btn-resume,
+.contact-btn {
   margin: 12px 0;
   font-size: 1.0625rem;
   color: #396df2;
@@ -430,7 +431,8 @@ body {
 
 .btn:hover,
 .popup-btn:hover,
-.btn-resume:hover {
+.btn-resume:hover,
+.contact-btn:hover {
   color: #fff;
   background-color: #6070ff;
   -webkit-transition: ease 1s;
@@ -439,16 +441,25 @@ body {
 
 .btn:active,
 .popup-btn:active,
-.btn-resume:active {
+.btn-resume:active,
+.contact-btn:active {
   color: #fff;
   background-color: #2230d2;
 }
 
 .btn:disabled,
 .popup-btn:disabled,
-.btn-resume:disabled {
+.btn-resume:disabled,
+.contact-btn:disabled {
   color: #5e6c84;
   border: 1px solid #c1c7d0;
+}
+
+.form-btn {
+  background-color: #fff;
+  margin-top: 22px;
+  width: 140px;
+  border-color: #fff;
 }
 
 .popup-bg {
@@ -710,11 +721,12 @@ textarea::placeholder {
   font-size: 0.9375rem;
 }
 
-.contact-btn {
-  background-color: #fff;
-  margin-top: 22px;
-  width: 140px;
-  border-color: #fff;
+.error-msg {
+  display: block;
+  color: #fff;
+  font-size: 0.9875rem;
+  padding-top: 12px;
+  border-radius: 8px;
 }
 
 @media screen and (min-width: 1100px) {
@@ -818,8 +830,8 @@ textarea::placeholder {
     gap: 20px;
   }
   .popup-details {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
   }
   .popup-desc-right {
     -ms-flex-preferred-size: 50%;
@@ -947,6 +959,9 @@ textarea::placeholder {
   }
   .contact-btn {
     margin: 22px auto;
+  }
+  .error-msg {
+    text-align: center;
   }
   :is(a, button, summary):focus-visible {
     outline: 3px dotted #396df2;
