@@ -16,9 +16,7 @@ menuItems.forEach((item) => {
 });
 
 // Adds project dynamically to page
-const worksSection = document.querySelector('.works');
-
-//Project details
+// Project details
 const worksList = [
   {
     title: 'Tonic',
@@ -71,10 +69,10 @@ const worksList = [
     clientName: 'Uber',
     jobTitle: 'Lead Developer',
     jobYear: '2018',
-  }
+  },
 ];
 
-//Technology list for page
+// Technology list for page
 function techs(techs) {
   return `
     <ul class="tags">
@@ -83,16 +81,14 @@ function techs(techs) {
   `;
 }
 
-//Technology list for popups
-let popupTechs = (techs) => {
-  return `
+// Technology list for popups
+const popupTechs = (techs) => `
     <ul class="tags">
       ${techs.map((tech) => `<li class="tag">${tech}</li>`).join('')}
     </ul>
   `;
-}
 
-//Dynamically render projects to page
+// Dynamically render projects to page
 function workCard(work) {
   return `
     <article class="card">
@@ -112,18 +108,17 @@ function workCard(work) {
   `;
 }
 
+const worksSection = document.querySelector('.works');
+
 worksSection.innerHTML = `
   ${worksList.map(workCard).join('')}
 `;
 
 const projectBtn = document.querySelectorAll('.btn');
-// const projectBtn = document.getElementsByClassName('btn');
+const header = document.querySelector('header');
 
 let modal;
 let modalBg;
-
-
-const header = document.querySelector('header');
 
 function closeModal() {
   if (modal) {
@@ -138,7 +133,6 @@ const arr = [];
 
 for (let i = 0; i < worksList.length; i += 1) {
   modal = document.createElement('article');
-  // modal.innerHTML += `
   arr.push(`
     <article class="popup">
       <div class="popup-header">
@@ -163,36 +157,18 @@ for (let i = 0; i < worksList.length; i += 1) {
         </div>              
       </div>
     </article> 
-    `)
-  // `;
+    `);
 }
 
 projectBtn.forEach((btn, index) => {
   btn.addEventListener('click', (click) => {
-    if (click.target.id == btn.id) {
+    if (click.target.id === btn.id) {
       modal.innerHTML = arr[index];
-      // modal.style.display = 'block';
-
       modalBg = document.createElement('div');
       modalBg.classList.add('popup-bg');
       modalBg.addEventListener('click', closeModal);
       document.body.insertBefore(modalBg, header);
       modalBg.appendChild(modal);
-
     }
-    // viewModal(worksList.work[0]);
-
-    // modal = document.createElement('article');
-    // modal.classList.add('popup');
-
-    // worksSection.innerHTML = `
-    //     ${worksList.forEach(popupCard)}
-    //   `;
   });
 });
-
-
-
-// worksSection.innerHTML = `
-//   ${worksList.map(popupCard).join('')}
-// `;
