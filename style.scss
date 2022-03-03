@@ -323,12 +323,13 @@ body {
 }
 
 .btn-resume {
-  width: 162px;
+  width: 162px !important;
 }
 
 .btn,
 .popup-btn,
-.btn-resume {
+.btn-resume,
+.contact-btn {
   margin: 12px 0;
   font-size: 1.0625rem;
   color: #396df2;
@@ -356,6 +357,13 @@ body {
     color: #5e6c84;
     border: 1px solid #c1c7d0;
   }
+}
+
+.form-btn {
+  background-color: #fff;
+  margin-top: 22px;
+  width: 140px;
+  border-color: #fff;
 }
 
 //Popup styles
@@ -563,11 +571,12 @@ textarea {
   }
 }
 
-.contact-btn {
-  background-color: #fff;
-  margin-top: 22px;
-  width: 140px;
-  border-color: #fff;
+.error-msg {
+  display: block;
+  color: #fff;
+  font-size: 0.9875rem;
+  padding-top: 12px;
+  border-radius: 8px;
 }
 
 //MEDIA QUERIES
@@ -798,6 +807,10 @@ textarea {
 
   .contact-btn {
     margin: 22px auto;
+  }
+
+  .error-msg {
+    text-align: center;
   }
 
   //Interactives
