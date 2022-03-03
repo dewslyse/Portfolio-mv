@@ -1,10 +1,8 @@
+// Toggle mobile menu
 const openMenu = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.desktop');
 const menuItems = document.querySelectorAll('.menu-item');
 
-const worksSection = document.querySelector('.works');
-
-// Toggle mobile menu
 openMenu.addEventListener('click', () => {
   openMenu.classList.toggle('hide');
   mobileMenu.classList.toggle('show');
@@ -12,18 +10,23 @@ openMenu.addEventListener('click', () => {
 
 menuItems.forEach((item) => {
   item.addEventListener('click', () => {
-    mobileMenu.classList.toggle('show');
+    mobileMenu.classList.remove('show');
     openMenu.classList.toggle('hide');
   });
 });
 
 // Adds project dynamically to page
+const worksSection = document.querySelector('.works');
+
+//Project details
 const worksList = [
   {
     title: 'Tonic',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    popupDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
     featuredImg: './images/Tonic.png',
-    technologies: ['html', 'css', 'javascript'],
+    popupImg: './images/tonic-popup-img.png',
+    technologies: ['html', 'css', 'javascript', 'bootstrap', 'ruby', 'ruby on rails'],
     liveURL: 'https://dewslyse.github.io/Portfolio-mv/',
     sourceURL: 'https://github.com/dewslyse/Portfolio-mv',
     clientName: 'Canopy',
@@ -33,8 +36,10 @@ const worksList = [
   {
     title: 'Multi-Post Stories',
     description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
+    popupDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
     featuredImg: './images/stories.png',
-    technologies: ['html', 'Ruby on rails', 'css', 'javascript'],
+    popupImg: './images/stories-popup-img.png',
+    technologies: ['html', 'Ruby on rails', 'ruby', 'css', 'javascript', 'github'],
     liveURL: 'https://dewslyse.github.io/Portfolio-mv/',
     sourceURL: 'https://github.com/dewslyse/Portfolio-mv',
     clientName: 'Facebook',
@@ -44,8 +49,10 @@ const worksList = [
   {
     title: 'Facebook 360',
     description: 'Exploring the future of media in Facebook\'s first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
+    popupDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
     featuredImg: './images/facebook-360.png',
-    technologies: ['html', 'Ruby on rails', 'css', 'javascript'],
+    popupImg: './images/facebook-popup-img.png',
+    technologies: ['html', 'css', 'bootstrap', 'github', 'Ruby on rails', 'javascript'],
     liveURL: 'https://dewslyse.github.io/Portfolio-mv/',
     sourceURL: 'https://github.com/dewslyse/Portfolio-mv',
     clientName: 'Facebook',
@@ -55,17 +62,29 @@ const worksList = [
   {
     title: 'Uber Navigation',
     description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
+    popupDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
     featuredImg: './images/uber.png',
-    technologies: ['html', 'Ruby on rails', 'css', 'javascript'],
+    popupImg: './images/uber-popup-img.png',
+    technologies: ['html', 'Ruby on rails', 'css', 'ruby', 'javascript', 'github'],
     liveURL: 'https://dewslyse.github.io/Portfolio-mv/',
     sourceURL: 'https://github.com/dewslyse/Portfolio-mv',
     clientName: 'Uber',
     jobTitle: 'Lead Developer',
     jobYear: '2018',
-  },
+  }
 ];
 
+//Technology list for page
 function techs(techs) {
+  return `
+    <ul class="tags">
+      ${techs.map((tech) => `<li class="tag">${tech}</li>`).slice(0, 3).join('')}
+    </ul>
+  `;
+}
+
+//Technology list for popups
+let popupTechs = (techs) => {
   return `
     <ul class="tags">
       ${techs.map((tech) => `<li class="tag">${tech}</li>`).join('')}
@@ -73,6 +92,7 @@ function techs(techs) {
   `;
 }
 
+//Dynamically render projects to page
 function workCard(work) {
   return `
     <article class="card">
@@ -95,3 +115,84 @@ function workCard(work) {
 worksSection.innerHTML = `
   ${worksList.map(workCard).join('')}
 `;
+
+const projectBtn = document.querySelectorAll('.btn');
+// const projectBtn = document.getElementsByClassName('btn');
+
+let modal;
+let modalBg;
+
+
+const header = document.querySelector('header');
+
+function closeModal() {
+  if (modal) {
+    modal.remove();
+  }
+  if (modalBg) {
+    modalBg.remove();
+  }
+}
+
+const arr = [];
+
+for (let i = 0; i < worksList.length; i += 1) {
+  modal = document.createElement('article');
+  // modal.innerHTML += `
+  arr.push(`
+    <article class="popup">
+      <div class="popup-header">
+        <h3 class="title color-caption">${worksList[i].title}</h3>
+        <img src="./images/Icon-cancel-black.png" alt="">    
+      </div>
+      <div class="popup-profile">
+        <div class="client">${worksList[i].clientName}</div>
+        <div class="role color-gray">${worksList[i].jobTitle}</div>
+        <div class="year color-gray">${worksList[i].jobYear}</div>
+      </div>
+      <img class="popup-img" src="${worksList[i].popupImg}" alt="" aria-hidden="true">
+      <div class="popup-desc">
+        <p class="popup-details">${worksList[i].popupDescription}</p>
+        <div class="popup-desc-right">
+          ${popupTechs(worksList[i].technologies)}
+          <hr class="popup-line">
+          <div class="popup-btn-gp">
+            <a class="popup-btn" href="${worksList[i].liveURL}">See live <span><img src="./images/live.png" alt=""></span></a>
+            <a class="popup-btn" href="${worksList[i].sourceURL}">See source <span><img src="./images/github-blue.png" alt=""></span></a>
+          </div>
+        </div>              
+      </div>
+    </article> 
+    `)
+  // `;
+}
+
+projectBtn.forEach((btn, index) => {
+  btn.addEventListener('click', (click) => {
+    if (click.target.id == btn.id) {
+      modal.innerHTML = arr[index];
+      // modal.style.display = 'block';
+
+      modalBg = document.createElement('div');
+      modalBg.classList.add('popup-bg');
+      modalBg.addEventListener('click', closeModal);
+      document.body.insertBefore(modalBg, header);
+      modalBg.appendChild(modal);
+
+    }
+    // viewModal(worksList.work[0]);
+
+    // modal = document.createElement('article');
+    // modal.classList.add('popup');
+
+    // worksSection.innerHTML = `
+    //     ${worksList.forEach(popupCard)}
+    //   `;
+  });
+});
+
+
+
+// worksSection.innerHTML = `
+//   ${worksList.map(popupCard).join('')}
+// `;
