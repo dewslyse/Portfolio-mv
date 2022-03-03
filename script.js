@@ -178,9 +178,10 @@ const email = document.querySelector('#email');
 const error = document.querySelector('.error-msg');
 const submit = document.querySelector('#submit');
 
-const isFormValid = () => {
+const isFormValid = (e) => {
   if (email.value.toLowerCase() !== email.value) {
     error.innerHTML = 'Form not submitted. Enter email in lower case';
+    e.preventDefault();
   } else {
     error.innerHTML = '';
   }
