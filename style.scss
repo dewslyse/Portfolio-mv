@@ -202,7 +202,8 @@ body {
   padding: 114px 24px;
 }
 
-.card {
+.card,
+.popup {
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -211,14 +212,15 @@ body {
   border-radius: 16px;
 }
 
-.card-img {
+.card-img,
+.popup-img {
   width: 100%;
   height: auto;
   transition: transform 0.35s ease 0s;
+}
 
-  &:hover {
-    transform: scale(0.99);
-  }
+.card-img:hover {
+  transform: scale(0.99);
 }
 
 .card-description {
@@ -232,7 +234,8 @@ body {
   margin-top: 12px;
 }
 
-.profile {
+.profile,
+.popup-profile {
   margin-top: 12px;
   display: flex;
   align-items: center;
@@ -245,6 +248,7 @@ body {
 
 .client {
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .role {
@@ -272,16 +276,20 @@ body {
   }
 }
 
-.details {
+.details,
+.popup-details {
   margin-top: 16px;
   line-height: 1.5;
 }
 
-.tags {
-  display: inline-flex;
+.tags,
+.popup-tags {
+  display: flex;
   margin: 16px 0;
   font-size: 0.75rem;
   font-weight: 500;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 
 .tag {
@@ -298,7 +306,29 @@ body {
   display: none;
 }
 
-.btn {
+.popup-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9375rem;
+  line-height: 20px;
+  margin-bottom: 8px;
+  width: unset;
+  flex-grow: 1;
+  text-decoration: none;
+
+  span {
+    margin-left: 12px;
+  }
+}
+
+.btn-resume {
+  width: 162px;
+}
+
+.btn,
+.popup-btn,
+.btn-resume {
   margin: 12px 0;
   font-size: 1.0625rem;
   color: #396df2;
@@ -328,6 +358,64 @@ body {
   }
 }
 
+//Popup styles
+.popup-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: #c1c7d0;
+  opacity: 0.98;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  z-index: 10000;
+  overflow: auto;
+  padding-top: 80px;
+}
+
+.popup {
+  margin: 24px;
+  z-index: 20000;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5px;
+}
+
+.popup-img {
+  border: 1px solid #c1c7d0;
+  border-radius: 5px;
+}
+
+.popup-profile {
+  margin: 0 0 12px;
+}
+
+.popup-details {
+  font-size: 0.9375rem;
+}
+
+.popup-line {
+  background-color: #ebecf0;
+  height: 1px;
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.popup-btn-gp {
+  display: flex;
+  gap: 12px;
+}
+
+.popup-close:hover {
+  cursor: pointer;
+  background-color: #a7aeff;
+}
+
 //About Self
 .about-self {
   display: flex;
@@ -344,10 +432,6 @@ body {
 .socials-about {
   margin: 32px 0 16px 12px;
   width: 200px;
-}
-
-.btn-resume {
-  width: 162px;
 }
 
 .skill-list {
@@ -496,6 +580,7 @@ textarea {
     height: 72px;
     position: fixed;
     top: 0;
+    padding-top: 0;
     z-index: 1000;
   }
 
@@ -558,6 +643,41 @@ textarea {
   //Works section
   .works {
     justify-content: center;
+  }
+
+  .popup-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: auto;
+    padding: 180px 0 20px;
+  }
+
+  .popup {
+    margin: 20px auto;
+    max-width: 1000px;
+    padding: 32px;
+    width: 100%;
+  }
+
+  .popup-profile {
+    margin: 0 0 24px;
+  }
+
+  .popup-desc {
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .popup-details {
+    flex-basis: 100%;
+  }
+
+  .popup-desc-right {
+    flex-basis: 50%;
   }
 
   .card {
