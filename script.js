@@ -192,6 +192,7 @@ const isFormValid = (e) => {
 submit.addEventListener('click', isFormValid);
 
 // Local Storage
+// Local storage
 const inputs = document.querySelectorAll('#name, #email, #message');
 
 function storedData() {
