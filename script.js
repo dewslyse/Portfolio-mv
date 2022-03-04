@@ -198,9 +198,9 @@ function storedData() {
   if (localStorage.getItem('formData'));
 
   const formInput = JSON.parse(localStorage.getItem('formData'));
-  fName.value = formInput['fullName'];
-  email.value = formInput['emailAddress'];
-  message.value = formInput['formMsg'];
+  fName.value = formInput.fullName;
+  email.value = formInput.emailAddress;
+  message.value = formInput.formMsg;
 }
 
 storedData();
