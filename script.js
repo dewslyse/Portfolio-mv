@@ -175,6 +175,8 @@ projectBtn.forEach((btn, index) => {
 
 // Check if email is lower case
 const email = document.querySelector('#email');
+const fName = document.querySelector('#name');
+const message = document.querySelector('#message');
 const error = document.querySelector('.error-msg');
 const submit = document.querySelector('#submit');
 
