@@ -174,7 +174,9 @@ projectBtn.forEach((btn, index) => {
 });
 
 // Check if email is lower case
+const fName = document.querySelector('#name');
 const email = document.querySelector('#email');
+const message = document.querySelector('#message');
 const error = document.querySelector('.error-msg');
 const submit = document.querySelector('#submit');
 
@@ -188,3 +190,18 @@ const isFormValid = (e) => {
 };
 
 submit.addEventListener('click', isFormValid);
+
+// Local Storage
+const inputs = document.querySelectorAll('#name, #email, #message');
+
+inputs.forEach((input) => {
+  input.addEventListener('change', () => {
+    const formData = {
+      fullName: fName.value,
+      emailAddress: email.value,
+      formMsg: message.value,
+    };
+
+    localStorage.setItem('formData', JSON.stringify(formData));
+  });
+});
