@@ -194,8 +194,19 @@ submit.addEventListener('click', isFormValid);
 // Local Storage
 const inputs = document.querySelectorAll('#name, #email, #message');
 
+function storedData() {
+  if (localStorage.getItem('formData'));
+
+  const formInput = JSON.parse(localStorage.getItem('formData'));
+  fName.value = formInput.fullName;
+  email.value = formInput.emailAddress;
+  message.value = formInput.formMsg;
+}
+
+storedData();
+
 inputs.forEach((input) => {
-  input.addEventListener('change', () => {
+  input.addEventListener('input', () => {
     const formData = {
       fullName: fName.value,
       emailAddress: email.value,
