@@ -19,17 +19,17 @@ menuItems.forEach((item) => {
 // Project details
 const worksList = [
   {
-    title: 'Tonic',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    popupDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
-    featuredImg: './images/Tonic.png',
-    popupImg: './images/tonic-popup-img.png',
-    technologies: ['html', 'css', 'javascript', 'bootstrap', 'ruby', 'ruby on rails'],
-    liveURL: 'https://dewslyse.github.io/Portfolio-mv/',
-    sourceURL: 'https://github.com/dewslyse/Portfolio-mv',
-    clientName: 'Canopy',
-    jobTitle: 'Back End Dev',
-    jobYear: '2015',
+    title: 'Conservation Summit 2022',
+    description: 'A forum for conservation professionals and students who are passionate about addressing biodiversity conservation and climate change challenges for a better future.',
+    popupDescription: 'This is a capstone project for the first module of the Microverse curriculum. In this project, I built a dummy website for a biodiversity conservation conference. <br> A forum for conservation professionals and students who are passionate about addressing biodiversity conservation and climate change challenges for a better future.',
+    featuredImg: './images/capstone1.png',
+    popupImg: './images/capstone1-popup-img.png',
+    technologies: ['html', 'scss', 'javascript', 'css'],
+    liveURL: 'https://dewslyse.github.io/Capstone1-mv/',
+    sourceURL: 'https://github.com/dewslyse/Capstone1-mv',
+    clientName: 'Microverse',
+    jobTitle: 'Capstone',
+    jobYear: '2022',
   },
   {
     title: 'Multi-Post Stories',
