@@ -164,8 +164,8 @@ for (let i = 0; i < worksList.length; i += 1) {
           ${popupTechs(worksList[i].technologies)}
           <hr class="popup-line">
           <div class="popup-btn-gp">
-            <a class="popup-btn" href="${worksList[i].liveURL}">See live <span><img src="./images/live.png" alt=""></span></a>
-            <a class="popup-btn" href="${worksList[i].sourceURL}">See source <span><img src="./images/github-blue.png" alt=""></span></a>
+            <a class="popup-btn" href="${worksList[i].liveURL}" target="_blank" rel="noopener noreferrer">See live <span><img src="./images/live.png" alt=""></span></a>
+            <a class="popup-btn" href="${worksList[i].sourceURL}" target="_blank" rel="noopener noreferrer">See source <span><img src="./images/github-blue.png" alt=""></span></a>
           </div>
         </div>              
       </div>
