@@ -18,62 +18,76 @@ menuItems.forEach((item) => {
 });
 
 // Technology list for page
-function techs(techs) {
-  return `
-    <ul class="tags">
-      ${techs.map((tech) => `<li class="tag">${tech}</li>`).slice(0, 3).join('')}
-    </ul>
-  `;
-}
+const techs = (techs) => `
+  <ul class="tags">
+    ${techs.map((tech) => `<li class="tag">${tech}</li>`).slice(0, 3).join('')}
+  </ul>
+`;
 
 // Technology list for popups
 const popupTechs = (techs) => `
-    <ul class="tags">
-      ${techs.map((tech) => `<li class="tag">${tech}</li>`).join('')}
-    </ul>
-  `;
-
-// Dynamically render projects to page
-function workCard(work) {
-  return `
-    <article class="card">
-      <img class="card-img" src="${work.featuredImg}" alt="" aria-hidden="true">
-      <div class="card-description">
-        <h3 class="title color-caption">${work.title}</h3>
-        <div class="profile">
-          <div class="client">${work.clientName}</div>
-          <div class="role color-gray">${work.jobTitle}</div>
-          <div class="year color-gray">${work.jobYear}</div>
-        </div>
-        <p class="details">${work.description}</p>
-        ${techs(work.technologies)}
-        <button class="btn" type="button">See Project</button>
-      </div>
-    </article>      
-  `;
-}
-
-const worksSection = document.querySelector('.works');
-
-worksSection.innerHTML = `
-  ${worksList.map(workCard).join('')}
+  <ul class="tags">
+    ${techs.map((tech) => `<li class="tag">${tech}</li>`).join('')}
+  </ul>
 `;
 
-const projectBtn = document.querySelectorAll('.btn');
-const main = document.querySelector('main');
+// Dynamically render projects to page
+const workCard = (work) => `  
+  <article class="card">
+    <img class="card-img" src="${work.featuredImg}" alt="" aria-hidden="true">
+    <div class="card-description">
+      <h3 class="title color-caption">${work.title}</h3>
+      <div class="profile">
+        <div class="client">${work.clientName}</div>
+        <div class="role color-gray">${work.jobTitle}</div>
+        <div class="year color-gray">${work.jobYear}</div>
+      </div>
+      <p class="details">${work.description}</p>
+      ${techs(work.technologies)}
+      <button class="btn" type="button">See Project</button>
+    </div>
+  </article>      
+`;
+
+
+// Load projects
+const loadMoreBtn = document.querySelector('.load-more');
+const projectsPerLoad = 4;
+let currentIndex = 0;
+
+const loadMoreProjects = () => {
+  const projects = worksList.slice(currentIndex, currentIndex + projectsPerLoad);
+  currentIndex += projectsPerLoad;
+
+  const worksSection = document.querySelector('.works');
+  worksSection.insertAdjacentHTML('beforeend', `
+    ${projects.map(workCard).join('')}
+  `);
+
+  // Attach event listener to buttons
+  const projectBtn = document.querySelectorAll('.btn');
+  projectBtn.forEach((btn, index) => {
+    btn.addEventListener('click', (click) => {
+      if (click.target.id === btn.id) {
+        showModal(index);
+      }
+    });
+  });
+
+  if (currentIndex >= worksList.length) {
+    loadMoreBtn.style.display = 'none';
+  }
+};
+
+loadMoreBtn.addEventListener('click', loadMoreProjects);
+
+// Initial load
+loadMoreProjects();
 
 // Project modal
+const main = document.querySelector('main');
 let modal;
 let modalBg;
-
-function closeModal() {
-  if (modal) {
-    modal.remove();
-  }
-  if (modalBg) {
-    modalBg.remove();
-  }
-}
 
 const arr = [];
 
@@ -103,21 +117,26 @@ for (let i = 0; i < worksList.length; i += 1) {
         </div>              
       </div>
     </article> 
-    `);
+  `);
 }
 
-projectBtn.forEach((btn, index) => {
-  btn.addEventListener('click', (click) => {
-    if (click.target.id === btn.id) {
-      modal.innerHTML = arr[index];
-      modalBg = document.createElement('div');
-      modalBg.classList.add('popup-bg');
-      modalBg.addEventListener('click', closeModal);
-      main.appendChild(modalBg);
-      modalBg.appendChild(modal);
-    }
-  });
-});
+const showModal = (index) => {
+  modal.innerHTML = arr[index];
+  modalBg = document.createElement('div');
+  modalBg.classList.add('popup-bg');
+  modalBg.addEventListener('click', closeModal);
+  main.appendChild(modalBg);
+  modalBg.appendChild(modal);
+};
+
+const closeModal = () => {
+  if (modal) {
+    modal.remove();
+  }
+  if (modalBg) {
+    modalBg.remove();
+  }
+}
 
 // Check if email is lower case
 const email = document.querySelector('#email');
@@ -162,75 +181,3 @@ inputs.forEach((input) => {
     localStorage.setItem('formData', JSON.stringify(formData));
   });
 });
-
-// Pagination
-const itemsPerPage = 2;
-const pageCount = Math.ceil(worksList.length / itemsPerPage);
-let currentPage = 1;
-
-const paginate = (items, page, perPage) => {
-  const start = (page - 1) * perPage;
-  const end = start + perPage;
-  return items.slice(start, end);
-};
-
-const render = (items) => {
-  // render the items to the DOM
-  const pagedWorks = document.querySelector('.pagination');
-
-  pagedWorks.innerHTML = `
-    ${items.map(workCard).join('')}
-  `;
-};
-
-const update = () => {
-  const paginatedData = paginate(worksList, currentPage, itemsPerPage);
-  render(paginatedData);
-};
-
-// Handle pagination events
-const previousBtn = document.getElementById("previous");
-const nextBtn = document.getElementById("next");
-
-const disableBtn = (btn) => {
-  // btn.classList.add("disabled");
-  btn.setAttribute("disabled", true);
-};
-
-const enableBtn = (btn) => {
-  // btn.classList.remove("disabled");
-  btn.removeAttribute("disabled");
-};
-
-const pageBtnStatus = () => {
-  if (currentPage === 1) {
-    disableBtn(previousBtn);
-  } else {
-    enableBtn(previousBtn);
-  }
-
-  if (currentPage === pageCount) {
-    disableBtn(nextBtn);
-  } else {
-    enableBtn(nextBtn);
-  }
-};
-
-previousBtn.addEventListener("click", () => {
-  if (currentPage > 1) {
-    currentPage--;
-    update();
-    pageBtnStatus();
-  }
-});
-
-nextBtn.addEventListener("click", () => {
-  if (currentPage < pageCount) {
-    currentPage++;
-    update();
-    pageBtnStatus();
-  }
-});
-
-// initial render
-update();
