@@ -195,11 +195,19 @@ body {
   position: absolute;
 }
 
-.works {
+.works, .pagination {
   display: grid;
   grid-template-columns: auto;
   grid-gap: 88px;
   padding: 114px 24px;
+}
+
+.pagination {
+  background-color: teal;
+}
+
+.navigation-container {
+  margin: 0 auto;
 }
 
 .card,
@@ -649,7 +657,7 @@ textarea {
   }
 
   //Works section
-  .works {
+  .works, .pagination {
     justify-content: center;
   }
 

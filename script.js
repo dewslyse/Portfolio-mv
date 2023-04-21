@@ -1,3 +1,5 @@
+import worksList from "./projects.js";
+
 // Toggle mobile menu
 const openMenu = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.desktop');
@@ -14,76 +16,6 @@ menuItems.forEach((item) => {
     openMenu.classList.toggle('hide');
   });
 });
-
-// Adds project dynamically to page
-// Project details
-const worksList = [
-  {
-    title: 'Covid-19 Tracking App',
-    description: 'A Single Page Application that allows users to track the novel coronavirus, SARS-CoV-2 across the globe. Covid-19 data can be filtered to the country level.',
-    popupDescription: 'A Single Page Application for tracking covid-19 cases. Within the app, users can retrieve country-specific data by by searching for or by clicking on a corresponding country. The app uses Covid-19 data provided by Narrativa technologies.',
-    featuredImg: './images/covid-app.webp',
-    popupImg: './images/covid-app-popup.webp',
-    technologies: ['React', 'Redux', 'API', 'SCSS', 'JavaScript'],
-    liveURL: 'https://covid-dewslyse.netlify.app/',
-    sourceURL: 'https://github.com/dewslyse/mv-covid-stats',
-    clientName: 'Microverse',
-    jobTitle: 'Capstone',
-    jobYear: '2022',
-  },
-  {
-    title: 'Conservation Summit 2022',
-    description: 'A forum for conservation professionals and students who are passionate about addressing biodiversity conservation and climate change challenges for a better future.',
-    popupDescription: 'This is a capstone project for the first module of the Microverse curriculum. In this project, I built a dummy website for a biodiversity conservation conference. <br> A forum for conservation professionals and students who are passionate about addressing biodiversity conservation and climate change challenges for a better future.',
-    featuredImg: './images/capstone1.webp',
-    popupImg: './images/capstone1-popup-img.webp',
-    technologies: ['HTML', 'SCSS', 'JavaScript', 'CSS'],
-    liveURL: 'https://dewslyse.github.io/Capstone1-mv/',
-    sourceURL: 'https://github.com/dewslyse/Capstone1-mv',
-    clientName: 'Microverse',
-    jobTitle: 'Capstone',
-    jobYear: '2022',
-  },
-  {
-    title: 'Budget App',
-    description: 'A simple, user-friendly mobile web application that helps you manage your funds. Users can create transactions associated with particular categories.',
-    popupDescription: 'A simple, user-friendly mobile web application that helps you manage your funds. Users can create transactions associated with particular categories. As a result, one can see how much they\'ve spent and on what.',
-    featuredImg: './images/budget.webp',
-    popupImg: './images/budget-popup.webp',
-    technologies: ['Ruby', 'Rails', 'PostgreSQL', 'SCSS'],
-    liveURL: 'https://mv-money-manager.onrender.com/',
-    sourceURL: 'https://github.com/dewslyse/mv-budget-app',
-    clientName: 'Microverse',
-    jobTitle: 'Capstone',
-    jobYear: '2022',
-  },
-  {
-    title: 'MicroTV web app',
-    description: 'Get the latest information about your favourite TV shows from the MicroTV web app. Like and add comments to the shows you love.',
-    popupDescription: 'Get the latest information about your favourite TV shows from the MicroTV web app. Like and add comments to the shows you love. The application uses data from the TVmaze API.',
-    featuredImg: './images/microTV.webp',
-    popupImg: './images/microTV-popup.webp',
-    technologies: ['JavaScript', 'Webpack', 'API', 'SCSS', 'CSS'],
-    liveURL: 'https://dewslyse.github.io/JS-capstone/',
-    sourceURL: 'https://github.com/dewslyse/JS-capstone',
-    clientName: 'Microverse',
-    jobTitle: 'Capstone',
-    jobYear: '2022',
-  },
-  {
-    title: 'Trekker App',
-    description: 'Book your next adventure using the Trekker app. Trekker offers a selection of the best adventure destinations around the globe.',
-    popupDescription: 'Book your next adventure using the Trekker app. Trekker offers a selection of the best adventure destinations around the globe.',
-    featuredImg: './images/trekker.webp',
-    popupImg: './images/trekker-popup.webp',
-    technologies: ['React', 'Rails', 'SCSS', 'Ruby', 'PostgreSQL'],
-    liveURL: 'https://mv-trekker.netlify.app/',
-    sourceURL: 'https://github.com/dewslyse/trekker-back-end',
-    clientName: 'Microverse',
-    jobTitle: 'Capstone',
-    jobYear: '2022',
-  },
-];
 
 // Technology list for page
 function techs(techs) {
@@ -130,6 +62,7 @@ worksSection.innerHTML = `
 const projectBtn = document.querySelectorAll('.btn');
 const main = document.querySelector('main');
 
+// Project modal
 let modal;
 let modalBg;
 
@@ -229,3 +162,75 @@ inputs.forEach((input) => {
     localStorage.setItem('formData', JSON.stringify(formData));
   });
 });
+
+// Pagination
+const itemsPerPage = 2;
+const pageCount = Math.ceil(worksList.length / itemsPerPage);
+let currentPage = 1;
+
+const paginate = (items, page, perPage) => {
+  const start = (page - 1) * perPage;
+  const end = start + perPage;
+  return items.slice(start, end);
+};
+
+const render = (items) => {
+  // render the items to the DOM
+  const pagedWorks = document.querySelector('.pagination');
+
+  pagedWorks.innerHTML = `
+    ${items.map(workCard).join('')}
+  `;
+};
+
+const update = () => {
+  const paginatedData = paginate(worksList, currentPage, itemsPerPage);
+  render(paginatedData);
+};
+
+// Handle pagination events
+const previousBtn = document.getElementById("previous");
+const nextBtn = document.getElementById("next");
+
+const disableBtn = (btn) => {
+  // btn.classList.add("disabled");
+  btn.setAttribute("disabled", true);
+};
+
+const enableBtn = (btn) => {
+  // btn.classList.remove("disabled");
+  btn.removeAttribute("disabled");
+};
+
+const pageBtnStatus = () => {
+  if (currentPage === 1) {
+    disableBtn(previousBtn);
+  } else {
+    enableBtn(previousBtn);
+  }
+
+  if (currentPage === pageCount) {
+    disableBtn(nextBtn);
+  } else {
+    enableBtn(nextBtn);
+  }
+};
+
+previousBtn.addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    update();
+    pageBtnStatus();
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  if (currentPage < pageCount) {
+    currentPage++;
+    update();
+    pageBtnStatus();
+  }
+});
+
+// initial render
+update();

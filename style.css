@@ -130,30 +130,9 @@ body {
 
 .wave {
   display: inline-block;
-  -webkit-animation-name: wave;
-          animation-name: wave;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: 5;
-          animation-iteration-count: 5;
-}
-
-@-webkit-keyframes wave {
-  from {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(16deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(16deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+  animation-name: wave;
+  animation-duration: 1s;
+  animation-iteration-count: 5;
 }
 
 @keyframes wave {
@@ -209,11 +188,19 @@ body {
   position: absolute;
 }
 
-.works {
+.works, .pagination {
   display: grid;
   grid-template-columns: auto;
   grid-gap: 88px;
   padding: 114px 24px;
+}
+
+.pagination {
+  background-color: teal;
+}
+
+.navigation-container {
+  margin: 0 auto;
 }
 
 .card,
@@ -574,9 +561,6 @@ textarea {
 textarea::-moz-placeholder {
   font-size: 0.9375rem;
 }
-textarea:-ms-input-placeholder {
-  font-size: 0.9375rem;
-}
 textarea::placeholder {
   font-size: 0.9375rem;
 }
@@ -645,7 +629,7 @@ textarea::placeholder {
     margin-top: 24px;
     margin-bottom: 14px;
   }
-  .works {
+  .works, .pagination {
     justify-content: center;
   }
   .popup-bg {
