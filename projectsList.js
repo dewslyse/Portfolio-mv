@@ -1,17 +1,4 @@
-const worksList = [
-  {
-    title: 'Covid-19 Tracking App',
-    description: 'A Single Page Application that allows users to track the novel coronavirus, SARS-CoV-2 across the globe. Covid-19 data can be filtered to the country level.',
-    popupDescription: 'A Single Page Application for tracking covid-19 cases. Within the app, users can retrieve country-specific data by by searching for or by clicking on a corresponding country. The app uses Covid-19 data provided by Narrativa technologies.',
-    featuredImg: './images/covid-app.webp',
-    popupImg: './images/covid-app-popup.webp',
-    technologies: ['React', 'Redux', 'API', 'SCSS', 'JavaScript'],
-    liveURL: 'https://covid-dewslyse.netlify.app/',
-    sourceURL: 'https://github.com/dewslyse/mv-covid-stats',
-    clientName: 'Microverse',
-    jobTitle: 'Capstone',
-    jobYear: '2022',
-  },
+const projectsList = [
   {
     title: 'Conservation Summit 2022',
     description: 'A forum for conservation professionals and students who are passionate about addressing biodiversity conservation and climate change challenges for a better future.',
@@ -21,6 +8,19 @@ const worksList = [
     technologies: ['HTML', 'SCSS', 'JavaScript', 'CSS'],
     liveURL: 'https://dewslyse.github.io/Capstone1-mv/',
     sourceURL: 'https://github.com/dewslyse/Capstone1-mv',
+    clientName: 'Microverse',
+    jobTitle: 'Capstone',
+    jobYear: '2022',
+  },
+  {
+    title: 'Covid-19 Tracking App',
+    description: 'A Single Page Application that allows users to track the novel coronavirus, SARS-CoV-2 across the globe. Covid-19 data can be filtered to the country level.',
+    popupDescription: 'A Single Page Application for tracking covid-19 cases. Within the app, users can retrieve country-specific data by by searching for or by clicking on a corresponding country. The app uses Covid-19 data provided by Narrativa technologies.',
+    featuredImg: './images/covid-app.webp',
+    popupImg: './images/covid-app-popup.webp',
+    technologies: ['React', 'Redux', 'API', 'SCSS', 'JavaScript'],
+    liveURL: 'https://covid-dewslyse.netlify.app/',
+    sourceURL: 'https://github.com/dewslyse/mv-covid-stats',
     clientName: 'Microverse',
     jobTitle: 'Capstone',
     jobYear: '2022',
@@ -66,4 +66,4 @@ const worksList = [
   },
 ];
 
-export default worksList;
+export default projectsList;
