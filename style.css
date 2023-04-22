@@ -71,10 +71,12 @@ body {
   height: 100vh;
   z-index: 10;
 }
+
 .desktop.show .menu-item {
   list-style: none;
   margin-bottom: 30px;
 }
+
 .desktop.show .menu-item-link {
   color: white;
   text-decoration: none;
@@ -139,19 +141,24 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   25% {
     transform: rotate(16deg);
   }
+
   50% {
     transform: rotate(0deg);
   }
+
   75% {
     transform: rotate(16deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
 }
+
 .description {
   line-height: 1.5;
   margin: 12px 0;
@@ -179,7 +186,7 @@ body {
 .sr-only {
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   width: 1px;
   margin: -1px;
@@ -188,19 +195,11 @@ body {
   position: absolute;
 }
 
-.works, .pagination {
+.works {
   display: grid;
   grid-template-columns: auto;
   grid-gap: 88px;
   padding: 114px 24px;
-}
-
-.pagination {
-  background-color: teal;
-}
-
-.navigation-container {
-  margin: 0 auto;
 }
 
 .card,
@@ -257,6 +256,7 @@ body {
   position: relative;
   left: -12px;
 }
+
 .role::after {
   content: url(./images/dot.png);
   position: relative;
@@ -267,6 +267,7 @@ body {
 .card:nth-of-type(3) .role::before {
   left: -8px;
 }
+
 .card:nth-of-type(2) .role::after,
 .card:nth-of-type(3) .role::after {
   right: -8px;
@@ -313,6 +314,7 @@ body {
   flex-grow: 1;
   text-decoration: none;
 }
+
 .popup-btn span {
   margin-left: 12px;
 }
@@ -321,10 +323,22 @@ body {
   width: 162px !important;
 }
 
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin: -60px auto 50px;
+}
+
+.load-more {
+  font-weight: bold;
+  border: 2px solid #6070ff;
+}
+
 .btn,
 .popup-btn,
 .btn-resume,
-.contact-btn {
+.contact-btn,
+.load-more {
   margin: 12px 0;
   font-size: 1.0625rem;
   color: #396df2;
@@ -337,25 +351,31 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
+
 .btn:hover,
 .popup-btn:hover,
 .btn-resume:hover,
-.contact-btn:hover {
+.contact-btn:hover,
+.load-more:hover {
   color: #fff;
   background-color: #6070ff;
   transition: ease 1s;
 }
+
 .btn:active,
 .popup-btn:active,
 .btn-resume:active,
-.contact-btn:active {
+.contact-btn:active,
+.load-more:active {
   color: #fff;
   background-color: #2230d2;
 }
+
 .btn:disabled,
 .popup-btn:disabled,
 .btn-resume:disabled,
-.contact-btn:disabled {
+.contact-btn:disabled,
+.load-more:disabled {
   color: #5e6c84;
   border: 1px solid #c1c7d0;
 }
@@ -459,10 +479,12 @@ summary {
   display: flex;
   justify-content: space-between;
 }
+
 summary::after {
   content: url(./images/chevron.png);
   transition: all 0.3s;
 }
+
 summary:hover {
   color: #396df2;
 }
@@ -485,6 +507,7 @@ details[open] summary::after {
   margin: 12px 0;
   border-radius: 8px;
 }
+
 .language span {
   padding: 9px 16px 0 12px;
 }
@@ -558,9 +581,11 @@ textarea {
   text-align: left;
   height: 170px;
 }
+
 textarea::-moz-placeholder {
   font-size: 0.9375rem;
 }
+
 textarea::placeholder {
   font-size: 0.9375rem;
 }
@@ -577,6 +602,7 @@ textarea::placeholder {
   .wrapper {
     max-width: 1440px;
   }
+
   .toolbar {
     height: 72px;
     position: fixed;
@@ -584,28 +610,35 @@ textarea::placeholder {
     padding-top: 0;
     z-index: 1000;
   }
+
   .toolbar-content {
     padding: 25px 80px;
     max-width: 1440px;
   }
+
   .hamburger {
     display: none;
   }
+
   .desktop {
     display: block;
   }
+
   .menu {
     display: flex;
   }
+
   .menu-item {
     list-style: none;
     margin-left: 32px;
   }
+
   .menu-item-link {
     text-decoration: none;
     font-weight: 500;
     font-size: 0.9375rem;
   }
+
   .headline {
     background-image: url(./images/header-bg-desktop.png);
     background-size: contain;
@@ -615,23 +648,30 @@ textarea::placeholder {
     justify-content: center;
     margin-top: 72px;
   }
+
   .headline-content {
     max-width: 920px;
   }
+
   .intro {
     font-size: 3rem;
     padding-right: 500px;
   }
+
   .description {
     font-size: 1.25rem;
   }
+
   .social-media {
     margin-top: 24px;
     margin-bottom: 14px;
   }
-  .works, .pagination {
+
+  .works,
+  .pagination {
     justify-content: center;
   }
+
   .popup-bg {
     display: flex;
     align-items: center;
@@ -640,93 +680,116 @@ textarea::placeholder {
     overflow: auto;
     padding: 180px 0 20px;
   }
+
   .popup {
     margin: 20px auto;
     max-width: 1000px;
     padding: 32px;
     width: 100%;
   }
+
   .popup-profile {
     margin: 0 0 24px;
   }
+
   .popup-desc {
     display: flex;
     margin-top: 16px;
     justify-content: space-between;
     gap: 20px;
   }
+
   .popup-details {
     flex-basis: 90%;
   }
+
   .popup-desc-right {
     flex-basis: 50%;
   }
+
   .card {
     flex-direction: row;
     margin: 0 142px;
     gap: 22px;
   }
+
   .card:nth-of-type(even) {
     flex-direction: row-reverse;
   }
+
   .card:hover {
     border: 2px solid #a7aeff;
     filter: drop-shadow(0 48px 48px rgba(37, 47, 137, 0.08));
   }
+
   .card-img {
     width: calc(50% - 22px);
     flex-basis: 50%;
   }
+
   .card-description {
     width: 50%;
     flex-basis: 50%;
     padding: 24px 12px 0 12px;
   }
+
   .title {
     margin-top: 0;
   }
+
   .details {
     margin-top: 24px;
   }
+
   .tags {
     margin: 24px 0;
   }
+
   .ruby {
     display: block;
   }
+
   .about-self {
     flex-direction: row;
     padding: 114px 152px;
     gap: 25px;
   }
+
   .about-content {
     margin: 0;
     max-width: 445px;
   }
+
   .about-description {
     font-size: 1rem;
   }
+
   .socials {
     display: flex;
   }
+
   .social-icon {
     margin-right: 23px;
     padding: 0;
     flex-grow: 0;
   }
+
   .skill-list {
     flex-grow: 1;
     margin-top: 0;
   }
+
   .language-list {
     display: flex;
     gap: 12px;
     justify-content: flex-start;
     flex-wrap: wrap;
   }
+
   .language-list span {
     padding: 16px 0 0 0;
   }
+
   .language {
     flex-direction: column;
     justify-content: flex-start;
@@ -736,33 +799,42 @@ textarea::placeholder {
     height: 120px;
     font-size: 0.9375rem;
   }
+
   .contact {
     background-image: url(./images/contact-bg-desktop.png);
     background-position: top 80px center;
     padding: 142px 0 103px;
   }
+
   .contact-description {
     max-width: 800px;
   }
+
   .contact-intro {
     padding: 0;
   }
+
   .contact-text {
     padding: 0 100px;
   }
+
   .contact-form {
     max-width: 460px;
   }
+
   .contact-btn {
     margin: 22px auto;
   }
+
   .error-msg {
     text-align: center;
   }
+
   :is(a, button, summary):focus-visible {
     outline: 3px dotted #396df2;
     outline-offset: 2px;
   }
+
   :is(input, textarea, .contact-btn):focus-visible {
     outline: 3px dotted #e5e5e5;
     outline-offset: 2px;
