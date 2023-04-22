@@ -95,7 +95,7 @@ main.addEventListener('click', (e) => {
 
 // Load projects
 const loadMoreBtn = document.querySelector('.load-more');
-const projectsPerLoad = 3;
+const projectsPerLoad = 5;
 let currentIndex = 0;
 
 const loadMoreProjects = () => {
