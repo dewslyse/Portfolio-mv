@@ -17,7 +17,7 @@ menuItems.forEach((item) => {
   });
 });
 
-// Technology list for page
+// Technology list for page. Limit to 3 technologies
 const techs = (techs) => `
   <ul class="tags">
     ${techs.map((tech) => `<li class="tag">${tech}</li>`).slice(0, 3).join('')}
@@ -31,7 +31,7 @@ const popupTechs = (techs) => `
   </ul>
 `;
 
-// Dynamically render projects to page
+// Project card template
 const workCard = (work) => `  
   <article class="card">
     <img class="card-img" src="${work.featuredImg}" alt="" aria-hidden="true">
@@ -46,13 +46,13 @@ const workCard = (work) => `
       ${techs(work.technologies)}
       <button class="btn" type="button">See Project</button>
     </div>
-  </article>      
+  </article>   
 `;
 
 
 // Load projects
 const loadMoreBtn = document.querySelector('.load-more');
-const projectsPerLoad = 4;
+const projectsPerLoad = 2;
 let currentIndex = 0;
 
 const loadMoreProjects = () => {
@@ -80,6 +80,7 @@ const loadMoreProjects = () => {
 };
 
 loadMoreBtn.addEventListener('click', loadMoreProjects);
+
 
 // Initial load
 loadMoreProjects();
@@ -118,14 +119,32 @@ for (let i = 0; i < worksList.length; i += 1) {
       </div>
     </article> 
   `);
+  // popupCloseBtn.addEventListener('click', closeModal);
+  // const popupCloseBtn = arr.querySelector('.popup-close');
+  // console.log(popupCloseBtn);
 }
+
+// Event listener for cloing modal
+main.addEventListener('click', (e) => {
+  if (e.target.classList.contains('popup-close')) {
+    // closeModal();
+    closeModalBg();
+    modalBg.classList.remove('popup-bg');
+    modalBg = null;
+  }
+});
 
 const showModal = (index) => {
   modal.innerHTML = arr[index];
+  if (!modalBg) {
   modalBg = document.createElement('div');
   modalBg.classList.add('popup-bg');
-  modalBg.addEventListener('click', closeModal);
   main.appendChild(modalBg);
+  // modalBg.appendChild(modal);
+  modalBg.addEventListener('click', closeModal);
+  }
+
+  modalBg.innerHTML = '';
   modalBg.appendChild(modal);
 };
 
@@ -133,8 +152,13 @@ const closeModal = () => {
   if (modal) {
     modal.remove();
   }
+}
+
+const closeModalBg = () => {
   if (modalBg) {
     modalBg.remove();
+    // modalBg.classList.remove('popup-bg');
+    // modalBg = null;
   }
 }
 
