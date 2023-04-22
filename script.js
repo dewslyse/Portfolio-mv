@@ -49,7 +49,6 @@ const workCard = (work) => `
   </article>   
 `;
 
-
 // Load projects
 const loadMoreBtn = document.querySelector('.load-more');
 const projectsPerLoad = 2;
@@ -119,29 +118,22 @@ for (let i = 0; i < worksList.length; i += 1) {
       </div>
     </article> 
   `);
-  // popupCloseBtn.addEventListener('click', closeModal);
-  // const popupCloseBtn = arr.querySelector('.popup-close');
-  // console.log(popupCloseBtn);
 }
 
-// Event listener for cloing modal
+// Event listener for closing modal with button
 main.addEventListener('click', (e) => {
   if (e.target.classList.contains('popup-close')) {
-    // closeModal();
-    closeModalBg();
-    modalBg.classList.remove('popup-bg');
-    modalBg = null;
+    closeModal();
   }
 });
 
 const showModal = (index) => {
   modal.innerHTML = arr[index];
+
   if (!modalBg) {
-  modalBg = document.createElement('div');
-  modalBg.classList.add('popup-bg');
-  main.appendChild(modalBg);
-  // modalBg.appendChild(modal);
-  modalBg.addEventListener('click', closeModal);
+    modalBg = document.createElement('div');
+    modalBg.classList.add('popup-bg');
+    main.appendChild(modalBg);
   }
 
   modalBg.innerHTML = '';
@@ -149,16 +141,9 @@ const showModal = (index) => {
 };
 
 const closeModal = () => {
-  if (modal) {
-    modal.remove();
-  }
-}
-
-const closeModalBg = () => {
   if (modalBg) {
     modalBg.remove();
-    // modalBg.classList.remove('popup-bg');
-    // modalBg = null;
+    modalBg = null;
   }
 }
 
