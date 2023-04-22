@@ -326,10 +326,22 @@ body {
   width: 162px !important;
 }
 
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin: -60px auto 50px;
+}
+
+.load-more {
+  font-weight: bold;
+  border: 2px solid #6070ff;
+}
+
 .btn,
 .popup-btn,
 .btn-resume,
-.contact-btn {
+.contact-btn,
+.load-more {
   margin: 12px 0;
   font-size: 1.0625rem;
   color: #396df2;
@@ -649,7 +661,8 @@ textarea {
   }
 
   //Works section
-  .works {
+  .works,
+  .pagination {
     justify-content: center;
   }
 
